@@ -1,0 +1,177 @@
+body {
+    /* background-color: rgb(47, 40, 40); */
+    /* color: white; */
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;;
+}
+main{
+  flex: 1;
+}
+.nav {
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* z-index: 1000; */
+    background-color: black;
+    color: snow;
+    height: 2.5rem;
+    display: flex;
+    justify-content: end;
+}
+
+.sections {
+    margin: 10px;
+    margin-right: 100px;
+    text-transform: capitalize;
+    font-size: larger;
+    cursor: pointer;
+}
+
+span:hover {
+    color: gray;
+}
+
+span {
+    text-decoration: unset;
+    margin: 10px;
+}
+a{
+    text-decoration: unset;
+    color: #fff;
+}
+
+.home {
+    background: url("https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 70px);
+    opacity: 0.9;
+    /* z-index: -1; */
+}
+
+.home-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Set text color to be visible on top of the background image */
+  }
+
+  .newpostForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for form elements */
+  .newpostarea{
+    height: calc(100vh - 100px);
+  }
+  #newposth1{
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+/* .postarea{
+ height: calc(100vh - 120px); 
+} */
+  .post-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-title {
+    color: #333;
+  }
+  
+  .post-date {
+    color: #777;
+  }
+  
+  .post-body {
+    margin-top: 20px;
+  } 
+
+  /* this is new one */
+  
+
+  /* Add these styles to your existing CSS or create a new CSS file */
+  @media (max-width: 768px) {
+    .nav {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .sections {
+      margin-right: 0;
+    }
+  
+    .home-content {
+      padding: 10px;
+    }
+  
+    .newpostForm,
+    .post-content {
+      max-width: 100%;
+    }
+  }
+
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-transform: capitalize;
+}

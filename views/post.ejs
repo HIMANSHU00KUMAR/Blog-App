@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="postarea">
+        <% if(posts.length>0){%>
+            <% posts.forEach(post=> { %>
+                <div class="post-content">
+                    <form action="/deletepost/<%= post._id %>" method="POST" style="display: flex;justify-content:end;">
+                        <button type="submit" style="background-color: transparent;"">
+                              <i class=" fas fa-trash-alt" style="color: red;font-size: 1rem;"></i>
+                        </button>
+                    </form>
+                    <h2 class="post-title">
+                        <%= post.title %>
+                    </h2>
+                    <time class="post-date">Published on <%= post.createdAt.toLocaleDateString('en-US', {
+                            year: 'numeric' , month: 'long' , day: 'numeric' }) %></time>
+                    <div class="post-body">
+                        <p>
+                            <%= post.content %>
+                        </p>
+                    </div>
+                </div>
+                <% }); %>
+                    <% }else{ %>
+                        <h1>No Posts Available</h1>
+                        <% } %>
+
+    </div>
+
+
+
+
+    <%- include("partials/footer.ejs") %> %>
